@@ -42,7 +42,7 @@ def run():
         format=serialization.PrivateFormat.PKCS8,
         encryption_algorithm=serialization.NoEncryption())
 
-    conn = st.experimental_connection("snowpark", private_key=pkb, role="readonly_role")
+    conn = st.experimental_connection("snowflake", private_key=pkb, role="readonly_role")
     query = conn.query('select * from free_dataset_gz1m6zd9upr.omop.person limit 10;');
     st.dataframe(query)
 
