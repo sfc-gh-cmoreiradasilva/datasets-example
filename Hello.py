@@ -30,7 +30,7 @@ def run():
 
     st.write("# Welcome to Streamlit! 👋")
 
-    with open("./.streamlit/dataset-credentials.p8", "rb") as key:
+    with open(st.secrets["connections"]["snowflake"]["private_key_file_path"], "rb") as key:
       p_key= serialization.load_pem_private_key(
           key.read(),
           password=None,
