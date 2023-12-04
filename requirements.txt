@@ -6,3 +6,4 @@ streamlit>=1.22
 sqlalchemy==1.4
 cryptography
 snowflake-connector-python
+snowflake-snowpark-python
